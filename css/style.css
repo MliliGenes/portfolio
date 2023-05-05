@@ -249,7 +249,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Raleway", sans-serif;
   color: rgb(211, 211, 211);
   margin-top: 1em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .title p span {
@@ -412,7 +412,7 @@ body::-webkit-scrollbar-thumb {
 .about .content .txt p {
   text-indent: 0.5em;
   font-family: "Raleway", sans-serif;
-  font-size: 0.8em;
+  font-size: 01em;
   color: rgb(211, 211, 211);
   margin-top: 1.5em;
 }
