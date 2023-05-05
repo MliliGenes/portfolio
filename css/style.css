@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body,
+html {
+  background-color: black;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 5vmax; */
+}
+body::-webkit-scrollbar {
+  background-color: rgb(19, 19, 19);
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+}
+.nav {
+  position: fixed;
+  top: 2vmax;
+  z-index: 999;
+  inset: 0;
+  height: fit-content;
+  color: white;
+  padding: 0 4vmax;
+  font-family: "Vina Sans", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom: 3px solid white;
+  backdrop-filter: blur(2px);
+}
+
+.logo {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  /* gap: 0.15em */
+  user-select: none;
+  text-decoration: none;
+  color: white;
+  translate: 0 -0.4em;
+  letter-spacing: 0.1em;
+}
+
+.logo span {
+  letter-spacing: 0px;
+  /* display: block; */
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-size: 1.7em;
+  transform: translateY(8px) translateX(-1px);
+}
+
+.burger {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.burger > i:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+.burger.stopIt {
+  pointer-events: none;
+}
+.menu {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  /* opacity: 0; */
+  /* background-color: rgba(0, 0, 0, 0.753); */
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.753) 0% 70%,
+    transparent 90% 100%
+  );
+  padding: 1em 5vmax;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-200%);
+  transition: 0.6s;
+  transition-delay: 0.4s;
+}
+.menu.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: 0.6s;
+  transition-delay: 0s;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05em;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(-100%);
+  transition: 0.6s;
+  transition-delay: 0s;
+  padding: 1em 3em;
+}
+.menu.active ul {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+  transition: 0.6s;
+  transition-delay: 0.4s;
+}
+
+.menu ul li a {
+  position: relative;
+  letter-spacing: 0.02em;
+  padding: 0.1em 0;
+  text-decoration: none;
+  font-family: "Vina Sans", cursive;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 2.6em;
+  transition: 0.3s;
+}
+
+.menu ul li a.active {
+  color: white;
+  transition: 0.6s;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.menu ul li a::before {
+  position: absolute;
+  content: attr(data-name);
+  inset: 0;
+  translate: 0 0.09em;
+  transform-origin: right;
+  transition: 0.4s;
+  color: white;
+  overflow: hidden;
+  width: 0;
+}
+
+.menu ul li a:not(.active):hover::before {
+  width: 100%;
+  transform-origin: left;
+  transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 23, 23);
+  background-image: radial-gradient(
+    circle at top right,
+    rgba(185, 185, 185, 0.15) 10%,
+    transparent
+  );
+}
+
+.title {
+  position: relative;
+  font-family: "Vina Sans", cursive;
+  color: white;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title h1::before {
+  position: absolute;
+  content: "";
+  top: 19%;
+  left: -0.22em;
+  width: 37.5%;
+  height: 30%;
+  border: 3px solid white;
+  border-radius: 0.75em 0 0 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.title h1::after {
+  position: absolute;
+  content: "";
+  right: 31.5%;
+  bottom: 6%;
+  width: 33.8%;
+  height: 20%;
+  border: 3px solid white;
+  border-radius: 0 0 0.2em 0;
+  border-top: none;
+  border-left: 0;
+}
+
+.title h1 {
+  user-select: none;
+  position: relative;
+  font-weight: 400;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3em;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4),
+    0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.title h1 span {
+  position: relative;
+  -webkit-text-stroke: 2px white;
+  font-size: 3em;
+  color: transparent;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
+}
+
+.title h1 span::after {
+  position: absolute;
+  content: "";
+  bottom: 30%;
+  right: -4.5%;
+  width: 3px;
+  aspect-ratio: 1/2;
+  background-color: rgb(255, 255, 255);
+}
+
+.title p {
+  text-indent: 0.5em;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  color: rgb(211, 211, 211);
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+.title p span {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.title a {
+  font-size: 1.1em;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  text-decoration: 0;
+  align-self: flex-start;
+  margin-left: 1em;
+  margin-top: 2em;
+  border-radius: 2em;
+  border: 3px solid white;
+  padding: 0.75em 1.5em;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+    inset 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: 300ms;
+}
+
+.title a:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+    inset 0 0 8px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  transition: 200ms;
+}
+
+.socials {
+  position: absolute;
+  right: 4vmax;
+  bottom: 4vmax;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials:hover a {
+  opacity: 0.6;
+}
+
+.socials:hover a:hover {
+  opacity: 1;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.scroll {
+  position: absolute;
+  left: 4vmax;
+  bottom: 4vmax;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.scroll div {
+  font-size: 1.1em;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+.scroll div::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+  top: 50%;
+  right: -15%;
+  translate: 0 -50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Vina Sans", cursive;
+  background-color: rgb(23, 23, 23);
+  background-image: radial-gradient(
+    circle at bottom right,
+    rgba(185, 185, 185, 0.15) 10%,
+    transparent
+  );
+}
+.about .content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.wrap {
+  width: calc(100% - 8vmax);
+  height: 250px;
+  align-self: center;
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+.about .content .txt {
+  padding: 2vmax 4vmax 4vmax;
+}
+.about .content .txt h2 {
+  width: fit-content;
+  position: relative;
+  font-weight: 400;
+  font-size: 2.4em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.1em;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4),
+    0 0 4px rgba(255, 255, 255, 0.2);
+}
+.about .content .txt h2::before {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 40%;
+  top: 16%;
+  left: -2%;
+  border: 2px solid white;
+  border-bottom: 0;
+  border-radius: 0.2em 0 0 0;
+  border-right: 0;
+}
+.about .content .txt h2::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 30%;
+  bottom: 5%;
+  right: 22%;
+  border: 2px solid white;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 0.1em 0;
+}
+.about .content .txt h2 span {
+  -webkit-text-stroke: 0.02em white;
+  font-size: 2em;
+  color: transparent;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
+}
+.about .content .txt p {
+  text-indent: 0.5em;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  color: rgb(211, 211, 211);
+  margin-top: 1.5em;
+}
+.about .content .txt p span {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.cover {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 228, 140, 0.075);
+  z-index: 1000;
+  mix-blend-mode: color;
+  pointer-events: none;
+}
