@@ -509,13 +509,13 @@ body::-webkit-scrollbar-thumb {
     inset 0 0 5px rgba(255, 255, 255, 0.4);
 }
 .portfolio .container .info h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-transform: uppercase;
   font-family: "Vina Sans", cursive;
   font-weight: 400;
 }
 .portfolio .container .info p {
-  font-size: 0.9 em;
+  font-size: 0.8em;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
