@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 body,
@@ -483,7 +483,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   display: flex;
   gap: 1em;
-  padding: 1.2em 1em 1em;
   overflow: hidden;
 }
 
@@ -497,13 +496,13 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   gap: 1em;
   align-items: center;
-  padding: 0 1em;
+  padding: 1em;
 }
 .portfolio .container .bcard .card {
   position: relative;
   max-width: 1240px;
   width: 100%;
-  flex: 1 0 300px;
+  flex: 1 0 30%;
   border-radius: 0.5em;
   overflow: hidden;
   background-color: rgb(30, 30, 30);
