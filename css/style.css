@@ -492,7 +492,7 @@ body::-webkit-scrollbar-thumb {
 }
 .portfolio .container .bcard {
   flex: 1 0 100%;
-  height: calc(300px * 3 + 1em * 4);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1em;
