@@ -159,8 +159,8 @@ body::-webkit-scrollbar-thumb {
 
 .home {
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
+  height: calc(100vh - 0.5em);
+  height: calc(100dvh - 0.5em);
   position: relative;
   z-index: 0;
   background-size: cover;
@@ -407,57 +407,117 @@ body::-webkit-scrollbar-thumb {
 }
 .portfolio .container {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  gap: 1em;
+  padding: 1em 1em 0em;
 }
 .portfolio .more {
   display: flex;
+  font-family: "Raleway", sans-serif;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 1.5em;
 }
-.portfolio .container .bcard {
-  flex: 1 0 100%;
+.portfolio .more a {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
-  align-items: center;
-  padding: 1em;
+  gap: 0.5em;
+  text-decoration: none;
+  color: white;
+  border-radius: 2em;
+  border: 3px solid white;
+  padding: 0.75em 1.5em;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+    inset 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: 300ms;
 }
-.portfolio .container .bcard .card {
+
+.portfolio .more a:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+    inset 0 0 8px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  transition: 200ms;
+}
+
+.portfolio .container .card {
   position: relative;
-  width: 100%;
   flex: 1 0 auto;
   border-radius: 0.5em;
   overflow: hidden;
   background-color: rgb(30, 30, 30);
-  filter: grayscale(40%);
+  filter: grayscale(50%);
   transition: 0.3s;
   border: 1.5px solid white;
 }
-.portfolio .container .bcard .card:hover {
+.portfolio .container .card:hover {
   filter: grayscale(0%);
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 5px white;
 }
-.portfolio .container .bcard .card img {
+
+.portfolio .container .card img {
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  transition: 0.6s;
   margin-bottom: 2.4em;
 }
-/* .portfolio .container .card h3 {
+.portfolio .container .card:hover img {
+  filter: blur(2px);
+}
+.portfolio .container .card .see {
   position: absolute;
-  bottom: 0;
-  z-index: 5;
-  padding: 0.5em 0;
-  width: 100%;
-  text-align: center;
+  right: 1em;
+  top: 1em;
+  font-size: 1.2em;
+  translate: 0 -10px;
+  opacity: 0;
+  transition: 0.6s;
+}
+.portfolio .container .card .see a {
   color: white;
+  text-decoration: none;
+}
+.portfolio .container .card:hover .see {
+  translate: 0 0px;
+  opacity: 1;
+}
+.portfolio .container .card .info {
+  position: absolute;
+  width: 100%;
+  min-height: 45%;
+  bottom: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+  translate: 0% 100%;
+  transform-origin: 0% 100%;
+  transition: 0.6s;
+  overflow: hidden;
+  border-top: 1.5px solid white;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+}
+.portfolio .container .card:hover .info {
+  translate: 0% 0%;
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.4);
+}
+.portfolio .container .info h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "Vina Sans", cursive;
+  font-weight: 400;
+}
+.portfolio .container .info p {
+  font-size: 0.9 em;
   font-family: "Raleway", sans-serif;
-} */
+  font-weight: 400;
+}
 .contact {
   min-height: 100vh;
 }

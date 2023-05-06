@@ -67,7 +67,7 @@ window.addEventListener(
 );
 var hover = new hoverEffect({
   parent: document.querySelector(".wrap"),
-  intensity: 0.6,
+  intensity: 1,
   image2: "/imgs/lil.png",
   image1: "/imgs/lil 2.png",
   displacementImage: "/imgs/heightMap.png",
