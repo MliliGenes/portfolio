@@ -361,7 +361,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  min-height: 100dvh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -470,7 +469,6 @@ body::-webkit-scrollbar-thumb {
 .portfolio {
   width: 100%;
   min-height: 100vh;
-  min-height: 100dvh;
   background-color: rgb(23, 23, 23);
   background-image: radial-gradient(
     circle at top right,
@@ -480,7 +478,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 .portfolio .container {
-  width: 100%;
   display: flex;
   overflow: hidden;
 }
