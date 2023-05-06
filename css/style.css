@@ -408,7 +408,7 @@ body::-webkit-scrollbar-thumb {
 .portfolio .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   gap: 1em;
   padding: 1em 1em 0em;
 }
@@ -441,7 +441,8 @@ body::-webkit-scrollbar-thumb {
 
 .portfolio .container .card {
   position: relative;
-  flex: 1 0 auto;
+  width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 0.5em;
   overflow: hidden;
   background-color: rgb(30, 30, 30);
