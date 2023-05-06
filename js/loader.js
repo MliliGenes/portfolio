@@ -63,8 +63,7 @@ function addGSAP() {
       trigger: secPort,
       pin: true,
       scrub: 3,
-      snap: 1 / (box_items.length - 1),
-      end: "+=" + secPort.offsetWidth - 0.1,
+      end: "+=" + secPort.offsetWidth,
     },
   });
 }
