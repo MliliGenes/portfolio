@@ -56,18 +56,20 @@ window.addEventListener(
       if (top >= secoffset && top < secheight + secoffset) {
         links.forEach((link) => {
           link.classList.remove("active");
-          menu.querySelector(`a[href="#${id}"]`).classList.add("active");
+          if ((_elm = menu.querySelector(`a[href="#${id}"]`))) {
+            _elm.classList.add("active");
+            _elm = null;
+          }
         });
       }
     });
   }, 200)
 );
-
 var hover = new hoverEffect({
   parent: document.querySelector(".wrap"),
-  intensity: 0.3,
-  image1: "/imgs/lil.png",
-  image2: "/imgs/lil 2.png",
+  intensity: 0.6,
+  image2: "/imgs/lil.png",
+  image1: "/imgs/lil 2.png",
   displacementImage: "/imgs/heightMap.png",
   angle1: 135,
   angle2: 45,
