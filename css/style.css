@@ -160,6 +160,7 @@ body::-webkit-scrollbar-thumb {
 .home {
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   position: relative;
   z-index: 0;
   background-size: cover;
@@ -364,6 +365,8 @@ body::-webkit-scrollbar-thumb {
 .about .content {
   position: relative;
   width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -459,6 +462,7 @@ body::-webkit-scrollbar-thumb {
 .portfolio {
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: rgb(23, 23, 23);
   background-image: radial-gradient(
     circle at top center,
