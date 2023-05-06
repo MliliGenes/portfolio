@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 body,
@@ -482,7 +482,6 @@ body::-webkit-scrollbar-thumb {
 .portfolio .container {
   width: 100%;
   display: flex;
-  gap: 1em;
   overflow: hidden;
 }
 
