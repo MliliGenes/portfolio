@@ -197,4 +197,3 @@
     }
   };
 });
-//# sourceMappingURL=hover-effect.umd.js.map

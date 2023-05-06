@@ -67,7 +67,7 @@ var hover = new hoverEffect({
   parent: document.querySelector(".wrap"),
   intensity: 0.3,
   image1: "/imgs/lil.png",
-  image2: "/imgs/lil.png",
+  image2: "/imgs/lil 2.png",
   displacementImage: "/imgs/heightMap.png",
   angle1: 135,
   angle2: 45,
