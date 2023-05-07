@@ -543,10 +543,10 @@ body::-webkit-scrollbar-thumb {
 .portfolio {
   backdrop-filter: blur(2px);
 }
-.contact {
+.end {
   padding: 1em 0;
 }
-.contact .footer {
+.end .footer {
   min-height: 300px;
   width: 100%;
   background-color: black;
@@ -557,7 +557,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1em 2em;
   gap: 0.5em;
 }
-.contact .footer .flogo {
+.end .footer .flogo {
   display: flex;
   align-items: baseline;
   font-size: 2.8em;
@@ -569,39 +569,39 @@ body::-webkit-scrollbar-thumb {
     0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-.contact .footer .flogo span {
+.end .footer .flogo span {
   position: relative;
   -webkit-text-stroke: 2px white;
   font-size: 3em;
   color: transparent;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
-.contact .footer .socails {
+.end .footer .socails {
   margin-top: 1em;
   flex: 1 0 auto;
   display: flex;
   align-items: end;
   padding-top: 2em;
 }
-.contact .footer p {
+.end .footer p {
   color: white;
   text-transform: uppercase;
   font-size: 1.15em;
 }
-.contact .footer .rights {
+.end .footer .rights {
   color: rgb(179, 179, 179);
 }
-.contact .footer .socails ul {
+.end .footer .socails ul {
   list-style: none;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.contact .footer .socails ul li a {
+.end .footer .socails ul li a {
   color: white;
   text-decoration: none;
   transition: 0.6;
 }
-.contact .footer .socails ul li a:hover {
+.end .footer .socails ul li a:hover {
   text-shadow: 00 0 5px rgba(255, 255, 255, 0.5);
 }
