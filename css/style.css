@@ -544,7 +544,8 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(2px);
 }
 .contact {
-  min-height: calc(100vh + 100px);
+  min-height: 100vh;
+  position: relative;
 }
 .contact .footer {
   position: absolute;
@@ -559,6 +560,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Raleway", sans-serif;
   padding: 1em 2em;
   gap: 0.5em;
+  border-bottom: 20px rgb(117, 117, 117) solid;
 }
 .contact .footer .flogo {
   display: flex;
