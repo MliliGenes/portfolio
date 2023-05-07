@@ -438,7 +438,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 3em;
   display: flex;
   align-items: baseline;
-  padding-left: 3vmax;
+  padding-left: 4vmax;
+  margin-top: 4vmax;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
 }
@@ -607,6 +608,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: baseline;
   gap: 0.1em;
+  margin-top: 4vmax;
   margin-bottom: 0.5em;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
