@@ -427,12 +427,30 @@ body::-webkit-scrollbar-thumb {
     rgba(185, 185, 185, 0.2) 10%,
     transparent
   );
+  font-family: "Vina Sans", cursive;
+
   border-radius: 20px;
+  color: white;
+}
+.portfolio h2 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 3em;
+  display: flex;
+  align-items: baseline;
+  padding-left: 3vmax;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
+    0 0 4px rgba(255, 255, 255, 0.2);
+}
+.portfolio h2 span {
+  -webkit-text-stroke: 0.02em white;
+  font-size: 2em;
+  color: transparent;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
 .portfolio .container {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
   gap: 1em;
   padding: 1em 1em 0em;
 }
@@ -503,6 +521,7 @@ body::-webkit-scrollbar-thumb {
 .portfolio .container .card .see a {
   color: white;
   text-decoration: none;
+  transition: 0.3s;
 }
 .portfolio .container .card:hover .see {
   translate: 0 0px;
@@ -524,6 +543,28 @@ body::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
   opacity: 0;
 }
+.portfolio .container .card .export {
+  position: absolute;
+  right: 3em;
+  top: 1em;
+  font-size: 1em;
+  translate: 0 -10px;
+  opacity: 0;
+  transition: 0.6s 0.2s;
+}
+.portfolio .container .card .export a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.portfolio .container .card .see a:hover,
+.portfolio .container .card .export a:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.portfolio .container .card:hover .export {
+  translate: 0 0px;
+  opacity: 1;
+}
 .portfolio .container .card:hover .info {
   translate: 0% 0%;
   opacity: 1;
@@ -544,12 +585,93 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(2px);
 }
 .endd {
-  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  gap: 1em;
+}
+.endd .contact-me {
+  flex: 1 0 auto;
+  color: white;
+  font-family: "Vina Sans", cursive;
+  height: 100%;
+  padding: 1em 3vmax;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.endd .contact-me h2 {
+  user-select: none;
+  font-weight: 400;
+  font-size: 3em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.1em;
+  margin-bottom: 0.5em;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
+    0 0 4px rgba(255, 255, 255, 0.2);
+}
+.endd .contact-me .whatsapp,
+.endd .contact-me .email {
+  display: flex;
+  width: 100%;
+  gap: 0.8em;
+}
+.endd .contact-me .whatsapp .scan,
+.endd .contact-me .email .scan {
+  flex: 0.5 0 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+.endd .contact-me .whatsapp .scan img,
+.endd .contact-me .email .scan img {
+  border-radius: 10px;
+  width: 100%;
+}
+.endd .contact-me .whatsapp .links,
+.endd .contact-me .email .links {
+  padding: 0.1em;
+  flex: 1 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.endd .contact-me .whatsapp .links a,
+.endd .contact-me .email .links a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.endd .contact-me .whatsapp .links a i {
+  font-size: 3.5em;
+}
+.endd .contact-me .email .links a i {
+  font-size: 3.1em;
+}
+.endd .contact-me .whatsapp .links a p,
+.endd .contact-me .email .links a p {
+  font-family: "Raleway", sans-serif;
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  width: 100%;
+  color: rgb(211, 211, 211);
+}
+.endd .contact-me .whatsapp .links a p span,
+.endd .contact-me .email .links a p span {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+.endd .contact-me h2 span {
+  -webkit-text-stroke: 0.02em white;
+  font-size: 2em;
+  color: transparent;
+  text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
 .endd .footer {
-  min-height: 300px;
   width: 100%;
-  background-color: black;
+  background-color: rgb(12, 12, 12);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -604,4 +726,8 @@ body::-webkit-scrollbar-thumb {
 }
 .endd .footer .socails ul li a:hover {
   text-shadow: 00 0 5px rgba(255, 255, 255, 0.5);
+}
+.offset {
+  background-color: rgb(255, 255, 255);
+  padding: 0.5em 3vmax;
 }

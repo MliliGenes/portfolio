@@ -53,10 +53,10 @@ window.addEventListener(
       let secoffset = sec.offsetTop;
       let secheight = sec.offsetHeight;
       let id = sec.id;
-      if (top >= secoffset && top < secheight + secoffset) {
+      if (top >= secoffset && top + 10 < secheight + secoffset) {
         links.forEach((link) => {
           link.classList.remove("active");
-          if ((_elm = menu.querySelector(`a[href="#${id}"]`))) {
+          if ((_elm = menu.querySelector(`a[href*="#${id}"]`))) {
             _elm.classList.add("active");
             _elm = null;
           }
