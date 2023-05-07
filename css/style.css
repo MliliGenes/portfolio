@@ -543,10 +543,10 @@ body::-webkit-scrollbar-thumb {
 .portfolio {
   backdrop-filter: blur(2px);
 }
-.end {
+.endd {
   padding: 1em 0;
 }
-.end .footer {
+.endd .footer {
   min-height: 300px;
   width: 100%;
   background-color: black;
@@ -557,7 +557,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1em 2em;
   gap: 0.5em;
 }
-.end .footer .flogo {
+.endd .footer .flogo {
   display: flex;
   align-items: baseline;
   font-size: 2.8em;
@@ -569,39 +569,39 @@ body::-webkit-scrollbar-thumb {
     0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-.end .footer .flogo span {
+.endd .footer .flogo span {
   position: relative;
   -webkit-text-stroke: 2px white;
   font-size: 3em;
   color: transparent;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
-.end .footer .socails {
+.endd .footer .socails {
   margin-top: 1em;
   flex: 1 0 auto;
   display: flex;
   align-items: end;
   padding-top: 2em;
 }
-.end .footer p {
+.endd .footer p {
   color: white;
   text-transform: uppercase;
   font-size: 1.15em;
 }
-.end .footer .rights {
+.endd .footer .rights {
   color: rgb(179, 179, 179);
 }
-.end .footer .socails ul {
+.endd .footer .socails ul {
   list-style: none;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.end .footer .socails ul li a {
+.endd .footer .socails ul li a {
   color: white;
   text-decoration: none;
   transition: 0.6;
 }
-.end .footer .socails ul li a:hover {
+.endd .footer .socails ul li a:hover {
   text-shadow: 00 0 5px rgba(255, 255, 255, 0.5);
 }
