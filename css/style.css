@@ -430,7 +430,6 @@ body::-webkit-scrollbar-thumb {
   );
   font-family: "Vina Sans", cursive;
   border-radius: 20px;
-  padding: 4vmax 0;
   color: white;
 }
 .portfolio .wrapper > h2 {
@@ -613,55 +612,50 @@ body::-webkit-scrollbar-thumb {
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
 }
-.endd .contact-me .whatsapp,
-.endd .contact-me .email {
+.endd .contact-me .contact-links {
   display: flex;
-  width: 100%;
-  gap: 0.8em;
-}
-.endd .contact-me .whatsapp .scan,
-.endd .contact-me .email .scan {
-  flex: 0.5 0 45%;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 0.5em;
+  gap: 1em;
 }
-.endd .contact-me .whatsapp .scan img,
-.endd .contact-me .email .scan img {
-  border-radius: 10px;
-  width: 100%;
-}
-.endd .contact-me .whatsapp .links,
-.endd .contact-me .email .links {
-  padding: 0.1em;
-  flex: 1 0 120px;
+.endd .contact-me .contact-links .link {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 1.25em;
+  background-color: rgb(30, 30, 30);
+  background-image: radial-gradient(
+    circle at bottom center,
+    rgba(185, 185, 185, 0.1) 10%,
+    transparent
+  );
+  text-align: center;
+  border-radius: 0.5em;
+  border: 1px solid white;
 }
-.endd .contact-me .whatsapp .links a,
-.endd .contact-me .email .links a {
+.endd .contact-me .contact-links .link:nth-child(2) {
+  background-image: radial-gradient(
+    circle at top center,
+    rgba(185, 185, 185, 0.1) 10%,
+    transparent
+  );
+}
+.endd .contact-me .contact-links .link a {
   color: white;
   text-decoration: none;
-  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
-.endd .contact-me .whatsapp .links a i {
+.endd .contact-me .contact-links .link a i {
+  font-size: 4em;
+  margin-bottom: 0.2em;
+}
+.endd .contact-me .contact-links .link a i.fa-envelope {
   font-size: 3.5em;
 }
-.endd .contact-me .email .links a i {
-  font-size: 3.1em;
-}
-.endd .contact-me .whatsapp .links a p,
-.endd .contact-me .email .links a p {
-  font-family: "Raleway", sans-serif;
-  margin-top: 0.5em;
-  font-size: 1.2em;
-  width: 100%;
+.endd .contact-me .contact-links .link a p {
   color: rgb(211, 211, 211);
 }
-.endd .contact-me .whatsapp .links a p span,
-.endd .contact-me .email .links a p span {
+.endd .contact-me .contact-links .link a p span {
   color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
@@ -678,13 +672,13 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
-  padding: 1em 2em;
+  padding: 1em 1.2em;
   gap: 0.5em;
 }
 .endd .footer .flogo {
   display: flex;
   align-items: baseline;
-  font-size: 2.8em;
+  font-size: 2.35em;
   font-family: "Vina Sans", cursive;
   color: white;
   text-decoration: none;
@@ -705,7 +699,6 @@ body::-webkit-scrollbar-thumb {
   flex: 1 0 auto;
   display: flex;
   align-items: end;
-  padding-top: 2em;
 }
 .endd .footer p {
   color: white;
