@@ -418,7 +418,7 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 .portfolio {
-  padding-top: 3vmax;
+  padding-top: 4vmax;
 }
 .portfolio .wrapper {
   width: 100%;
@@ -429,18 +429,17 @@ body::-webkit-scrollbar-thumb {
     transparent
   );
   font-family: "Vina Sans", cursive;
-
   border-radius: 20px;
+  padding: 4vmax 0;
   color: white;
 }
-.portfolio .wrapper h2 {
+.portfolio .wrapper > h2 {
   user-select: none;
   font-weight: 400;
   font-size: 3em;
   display: flex;
   align-items: baseline;
   padding-left: 4vmax;
-  margin-top: 4vmax;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
 }
