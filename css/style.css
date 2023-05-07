@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 body,
@@ -417,10 +417,11 @@ body::-webkit-scrollbar-thumb {
   mix-blend-mode: color;
   pointer-events: none;
 }
-
 .portfolio {
+  padding-top: 3vmax;
+}
+.portfolio .wrapper {
   width: 100%;
-
   background-color: rgb(30, 30, 30);
   background-image: radial-gradient(
     circle at top right,
@@ -432,7 +433,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   color: white;
 }
-.portfolio h2 {
+.portfolio .wrapper h2 {
   user-select: none;
   font-weight: 400;
   font-size: 3em;
@@ -443,26 +444,26 @@ body::-webkit-scrollbar-thumb {
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
 }
-.portfolio h2 span {
+.portfolio .wrapper h2 span {
   -webkit-text-stroke: 0.02em white;
   font-size: 2em;
   color: transparent;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
-.portfolio .container {
+.portfolio .wrapper .container {
   display: flex;
   flex-direction: column;
   gap: 1em;
   padding: 1em 1em 0em;
 }
-.portfolio .more {
+.portfolio .wrapper .more {
   display: flex;
   font-family: "Raleway", sans-serif;
   justify-content: center;
   align-items: center;
   padding: 1.5em;
 }
-.portfolio .more a {
+.portfolio .wrapper .more a {
   display: flex;
   gap: 0.5em;
   text-decoration: none;
@@ -475,14 +476,14 @@ body::-webkit-scrollbar-thumb {
   transition: 300ms;
 }
 
-.portfolio .more a:hover {
+.portfolio .wrapper .more a:hover {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
     inset 0 0 8px rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   transition: 200ms;
 }
 
-.portfolio .container .card {
+.portfolio .wrapper .container .card {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
@@ -493,12 +494,12 @@ body::-webkit-scrollbar-thumb {
   transition: 0.3s;
   border: 1.5px solid white;
 }
-.portfolio .container .card:hover {
+.portfolio .wrapper .container .card:hover {
   filter: grayscale(0%);
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 5px white;
 }
 
-.portfolio .container .card img {
+.portfolio .wrapper .container .card img {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -507,10 +508,10 @@ body::-webkit-scrollbar-thumb {
   transition: 0.6s;
   margin-bottom: 2.4em;
 }
-.portfolio .container .card:hover img {
+.portfolio .wrapper .container .card:hover img {
   filter: blur(2px);
 }
-.portfolio .container .card .see {
+.portfolio .wrapper .container .card .see {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -519,16 +520,16 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   transition: 0.6s;
 }
-.portfolio .container .card .see a {
+.portfolio .wrapper .container .card .see a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
 }
-.portfolio .container .card:hover .see {
+.portfolio .wrapper .container .card:hover .see {
   translate: 0 0px;
   opacity: 1;
 }
-.portfolio .container .card .info {
+.portfolio .wrapper .container .card .info {
   position: absolute;
   width: 100%;
   bottom: 0%;
@@ -544,7 +545,7 @@ body::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
   opacity: 0;
 }
-.portfolio .container .card .export {
+.portfolio .wrapper .container .card .export {
   position: absolute;
   right: 3em;
   top: 1em;
@@ -553,36 +554,36 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   transition: 0.6s 0.2s;
 }
-.portfolio .container .card .export a {
+.portfolio .wrapper .container .card .export a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
 }
-.portfolio .container .card .see a:hover,
-.portfolio .container .card .export a:hover {
+.portfolio .wrapper .container .card .see a:hover,
+.portfolio .wrapper .container .card .export a:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-.portfolio .container .card:hover .export {
+.portfolio .wrapper .container .card:hover .export {
   translate: 0 0px;
   opacity: 1;
 }
-.portfolio .container .card:hover .info {
+.portfolio .wrapper .container .card:hover .info {
   translate: 0% 0%;
   opacity: 1;
 }
-.portfolio .container .info h2 {
+.portfolio .wrapper .container .info h2 {
   font-size: 2em;
   text-transform: uppercase;
   font-family: "Vina Sans", cursive;
   font-weight: 400;
 }
-.portfolio .container .info p {
+.portfolio .wrapper .container .info p {
   font-size: 0.8em;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 .home,
-.portfolio {
+.portfolio .wrapper {
   backdrop-filter: blur(2px);
 }
 .endd {
