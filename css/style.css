@@ -544,7 +544,7 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(2px);
 }
 .contact {
-  min-height: 100vh;
+  min-height: calc(100vh + 100px);
 }
 .contact .footer {
   position: absolute;
