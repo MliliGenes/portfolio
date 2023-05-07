@@ -11,7 +11,8 @@
 
 body,
 html {
-  background-color: rgb(40, 40, 40);
+  position: relative;
+  background-color: rgba(40, 40, 40);
   min-height: 100vh;
   scroll-behavior: smooth;
   padding: 0 0.2em;
@@ -23,11 +24,30 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255);
 }
+.kiki {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.kiki::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  inset: 0;
+  width: var(--p);
+  transition: 0.6s linear;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+}
 .nav {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 999;
+  z-index: 100;
   width: 100%;
   height: fit-content;
   color: white;
@@ -159,15 +179,14 @@ body::-webkit-scrollbar-thumb {
 
 .home {
   width: 100%;
-  height: calc(100vh - 0.5em);
-  height: calc(100dvh - 0.5em);
+  height: calc(100vh - 0.5em - 5px);
+  height: calc(100dvh - 0.5em - 5px);
   position: relative;
   z-index: 0;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(30, 30, 30);
   background-image: radial-gradient(
     circle at bottom right,
     rgba(185, 185, 185, 0.2) 10%,
@@ -342,13 +361,13 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   content: "";
   inset: 0;
+  width: calc(100% -0.5em);
   background-image: linear-gradient(
     0deg,
-    rgb(40, 40, 40) 0% 10%,
+    rgb(40, 40, 40) 0% 15%,
     transparent 30% 70%,
     rgb(40, 40, 40)
   );
-  background-size: cover;
 }
 .about .content .txt {
   padding: 2vmax 4vmax 4vmax;
@@ -521,4 +540,8 @@ body::-webkit-scrollbar-thumb {
 }
 .contact {
   min-height: 100vh;
+}
+.home,
+.portfolio {
+  backdrop-filter: blur(2px);
 }

@@ -74,3 +74,11 @@ var hover = new hoverEffect({
   angle1: 135,
   angle2: 45,
 });
+
+window.addEventListener("scroll", () => {
+  const totalHeight = document.body.offsetHeight - window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const progress = (scrollPosition / totalHeight) * 100;
+  let bg = document.querySelector(".kiki");
+  bg.setAttribute("style", "--p: " + progress + "%;");
+});
