@@ -1,13 +1,13 @@
 @media screen and (min-width: 768px) {
   .title h1 {
-    font-size: 4em;
-    text-shadow: 15px 15px 15px rgb(0, 0, 0, 0.3),
+    font-size: 3.8em;
+    text-shadow: 15px 15px 10px rgb(0, 0, 0, 0.15),
       0 0 5px rgba(255, 255, 255, 0.3);
   }
 
   .title h1 span {
     font-size: 3em;
-    text-shadow: 15px 15px 15px rgb(0, 0, 0, 0.2);
+    text-shadow: 15px 15px 15px rgb(0, 0, 0, 0.15);
   }
   .title p {
     font-size: 1.5em;

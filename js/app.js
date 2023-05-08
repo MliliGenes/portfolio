@@ -47,40 +47,6 @@ window.addEventListener("keydown", (e) => {
     }, 600);
   }
 });
-window.addEventListener("scroll", () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let secoffset = sec.offsetTop;
-    let secheight = sec.offsetHeight;
-    let id = sec.id;
-    if (top >= secoffset && top < secheight + secoffset) {
-      links.forEach((link) => {
-        link.classList.remove("active");
-        if ((_elm = menu.querySelector(`a[href*="#${id}"]`))) {
-          _elm.classList.add("active");
-          _elm = null;
-        }
-      });
-    }
-  });
-});
-window.addEventListener("scroll", () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let secoffset = sec.offsetTop;
-    let secheight = sec.offsetHeight;
-    let id = sec.id;
-    if (top >= secoffset && top < secheight + secoffset) {
-      links2.forEach((link) => {
-        link.classList.remove("active");
-        if ((_elm = nav.querySelector(`a[href*="#${id}"]`))) {
-          _elm.classList.add("active");
-          _elm = null;
-        }
-      });
-    }
-  });
-});
 var hover = new hoverEffect({
   parent: document.querySelector(".wrap"),
   intensity: 1,
@@ -104,3 +70,8 @@ function progress() {
   let bg = document.querySelector(".kiki");
   bg.setAttribute("style", "--p: " + progress + "%;");
 }
+window.addEventListener("resize", () => {
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
+});

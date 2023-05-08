@@ -14,20 +14,19 @@
     text-decoration: none;
     font-family: "Vina Sans", cursive;
     font-weight: 200;
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 2em;
-    transition: 0.3s;
-  }
-  .nav ul li a.active {
     color: white;
-    transition: 0.6s;
+    font-size: 1.7em;
+    transition: 0.3s;
+    letter-spacing: 0.025em;
+  }
+  .nav ul li a:hover {
+    transition: 0.3s;
     opacity: 1;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
   }
   .about .content {
     flex-direction: row;
     justify-content: center;
-    padding-top: 2em;
   }
   .wrap {
     flex: 1 0 45%;
@@ -47,7 +46,7 @@
     font-size: 1.5em;
   }
   .title h1 {
-    font-size: 5.5em;
+    font-size: 4.5em;
   }
   .title p {
     font-size: 1.8em;
@@ -61,5 +60,21 @@
     position: absolute;
     bottom: 0%;
     left: 4vmax;
+  }
+  .portfolio .wrapper .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .portfolio .wrapper .container .card {
+    position: relative;
+    flex: 0 0 48%;
+    aspect-ratio: 16/9;
+    border-radius: 0.5em;
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    filter: grayscale(50%);
+    transition: 0.3s;
+    border: 1.5px solid white;
   }
 }
