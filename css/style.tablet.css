@@ -13,7 +13,7 @@
     font-size: 1.5em;
   }
   .logo {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .burger {
     font-size: 2em;
@@ -25,11 +25,13 @@
     font-size: 4em;
   }
   .title a {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-top: 1.5em;
   }
   .socials {
-    font-size: 2em;
+    font-size: 1.5em;
     flex-direction: row;
+    gap: 0.8em;
   }
   .about .content .wrap h2 {
     font-size: 5em;
@@ -74,7 +76,7 @@
   .endd .contact-me .contact-links {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
   }
   .endd .contact-me .contact-links .link {
     display: flex;
@@ -91,6 +93,10 @@
   .endd .footer {
     align-items: center;
   }
+  .endd .footer > * {
+    max-width: 400px;
+    width: 100%;
+  }
   .endd .contact-me .contact-links .link {
     background-image: radial-gradient(
       circle at right center,
@@ -104,5 +110,15 @@
       rgba(185, 185, 185, 0.1) 10%,
       transparent
     );
+  }
+  .endd .footer .socails ul li a {
+    font-size: 1.2em;
+  }
+
+  .endd .footer p {
+    font-size: 1.4em;
+  }
+  .endd .footer .flogo {
+    font-size: 2.8em;
   }
 }

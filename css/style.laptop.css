@@ -1,0 +1,65 @@
+@media screen and (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+  .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+  }
+  .nav ul li a {
+    position: relative;
+    letter-spacing: 0.02em;
+    padding: 0.1em 0;
+    text-decoration: none;
+    font-family: "Vina Sans", cursive;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 2em;
+    transition: 0.3s;
+  }
+  .nav ul li a.active {
+    color: white;
+    transition: 0.6s;
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  .about .content {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2em;
+  }
+  .wrap {
+    flex: 1 0 45%;
+    align-self: flex-start;
+    overflow: visible;
+  }
+
+  .about .content .txt {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 4vmax 2em 2em;
+    gap: 2.5em;
+  }
+  .about .content .txt p {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  .title h1 {
+    font-size: 5.5em;
+  }
+  .title p {
+    font-size: 1.8em;
+  }
+  .title a {
+    font-size: 1.6em;
+  }
+  .about .content .wrap h2 {
+    user-select: none;
+    width: fit-content;
+    position: absolute;
+    bottom: 0%;
+    left: 4vmax;
+  }
+}

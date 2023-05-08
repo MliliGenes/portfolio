@@ -25,6 +25,10 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
 }
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .kiki {
   --p: 0%;
   z-index: 999;
@@ -59,6 +63,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   background-color: rgba(41, 41, 41, 0.9);
   backdrop-filter: blur(4px);
+}
+.nav ul {
+  display: none;
 }
 .nav .inner {
   display: flex;
@@ -579,8 +586,9 @@ body::-webkit-scrollbar-thumb {
 .endd .contact-me .contact-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 1em;
+  flex: 1 0 auto;
 }
 .endd .contact-me .contact-links .link {
   display: flex;
@@ -642,6 +650,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(12, 12, 12);
   border-radius: 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
   padding: 1em 1.2em;
@@ -667,12 +676,11 @@ body::-webkit-scrollbar-thumb {
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.4);
 }
 .endd .footer .socails {
-  margin-top: 1em;
-  flex: 1 0 auto;
   display: flex;
   align-items: end;
-  max-width: 400px;
+  margin-top: 1.5em;
 }
+
 .endd .footer p {
   color: white;
   text-transform: uppercase;
@@ -686,6 +694,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: fit-content;
   gap: 1.5em;
 }
 .endd .footer .socails ul li a {
@@ -694,9 +703,5 @@ body::-webkit-scrollbar-thumb {
   transition: 0.6;
 }
 .endd .footer .socails ul li a:hover {
-  text-shadow: 00 0 5px rgba(255, 255, 255, 0.5);
-}
-.offset {
-  background-color: rgb(255, 255, 255);
-  padding: 0.5em 3vmax;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }

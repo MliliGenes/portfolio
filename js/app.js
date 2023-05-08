@@ -1,6 +1,8 @@
 const nemuBtn = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const links = menu.querySelectorAll("a");
+const nav = document.querySelector(".nav ul");
+const links2 = nav.querySelectorAll("a");
 const sections = document.querySelectorAll("section");
 
 nemuBtn.addEventListener("click", () => {
@@ -45,26 +47,40 @@ window.addEventListener("keydown", (e) => {
     }, 600);
   }
 });
-window.addEventListener(
-  "scroll",
-  _.debounce(() => {
-    sections.forEach((sec) => {
-      let top = window.scrollY;
-      let secoffset = sec.offsetTop;
-      let secheight = sec.offsetHeight;
-      let id = sec.id;
-      if (top >= secoffset && top + 10 < secheight + secoffset) {
-        links.forEach((link) => {
-          link.classList.remove("active");
-          if ((_elm = menu.querySelector(`a[href*="#${id}"]`))) {
-            _elm.classList.add("active");
-            _elm = null;
-          }
-        });
-      }
-    });
-  }, 200)
-);
+window.addEventListener("scroll", () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let secoffset = sec.offsetTop;
+    let secheight = sec.offsetHeight;
+    let id = sec.id;
+    if (top >= secoffset && top < secheight + secoffset) {
+      links.forEach((link) => {
+        link.classList.remove("active");
+        if ((_elm = menu.querySelector(`a[href*="#${id}"]`))) {
+          _elm.classList.add("active");
+          _elm = null;
+        }
+      });
+    }
+  });
+});
+window.addEventListener("scroll", () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let secoffset = sec.offsetTop;
+    let secheight = sec.offsetHeight;
+    let id = sec.id;
+    if (top >= secoffset && top < secheight + secoffset) {
+      links2.forEach((link) => {
+        link.classList.remove("active");
+        if ((_elm = nav.querySelector(`a[href*="#${id}"]`))) {
+          _elm.classList.add("active");
+          _elm = null;
+        }
+      });
+    }
+  });
+});
 var hover = new hoverEffect({
   parent: document.querySelector(".wrap"),
   intensity: 1,
