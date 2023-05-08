@@ -563,7 +563,7 @@ section.about,
   display: flex;
   align-items: baseline;
   gap: 0.1em;
-  margin-top: 4vmax;
+  margin-top: 2vmax;
   margin-bottom: 0.5em;
   text-shadow: 15px 15px 25px rgb(0, 0, 0, 0.2),
     0 0 4px rgba(255, 255, 255, 0.2);
