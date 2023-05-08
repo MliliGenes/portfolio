@@ -1,0 +1,108 @@
+@media screen and (min-width: 768px) {
+  .title h1 {
+    font-size: 4em;
+    text-shadow: 15px 15px 15px rgb(0, 0, 0, 0.3),
+      0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  .title h1 span {
+    font-size: 3em;
+    text-shadow: 15px 15px 15px rgb(0, 0, 0, 0.2);
+  }
+  .title p {
+    font-size: 1.5em;
+  }
+  .logo {
+    font-size: 2em;
+  }
+  .burger {
+    font-size: 2em;
+  }
+  .nav {
+    padding: 0 3em;
+  }
+  .menu ul li a {
+    font-size: 4em;
+  }
+  .title a {
+    font-size: 1.5em;
+  }
+  .socials {
+    font-size: 2em;
+    flex-direction: row;
+  }
+  .about .content .wrap h2 {
+    font-size: 5em;
+    gap: 0em;
+  }
+  .about .content .txt p {
+    font-size: 1.6em;
+  }
+  .portfolio .wrapper > h2 {
+    font-size: 5em;
+  }
+  .portfolio .wrapper .container {
+    gap: 2em;
+  }
+  .portfolio .wrapper .container .card {
+    max-width: 720px;
+    border: 3px solid white;
+  }
+  .portfolio .wrapper .container {
+    display: flex;
+    align-items: center;
+  }
+  .portfolio .wrapper .container .info h2 {
+    font-size: 5em;
+  }
+  .portfolio .wrapper .container .info p {
+    font-size: 1.5em;
+  }
+  .portfolio .wrapper .container .card .see {
+    font-size: 2em;
+  }
+  .portfolio .wrapper .container .card .export {
+    font-size: 2em;
+  }
+  .endd .contact-me h2 {
+    font-size: 5em;
+  }
+  .portfolio .wrapper .more a {
+    font-size: 1.2em;
+    margin-top: 2em;
+  }
+  .endd .contact-me .contact-links {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .endd .contact-me .contact-links .link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3em 2em;
+  }
+  .endd .contact-me .contact-links .link a i {
+    font-size: 6em;
+  }
+  .endd .contact-me .contact-links .link a i.fa-envelope {
+    font-size: 5.9em;
+  }
+  .endd .footer {
+    align-items: center;
+  }
+  .endd .contact-me .contact-links .link {
+    background-image: radial-gradient(
+      circle at right center,
+      rgba(185, 185, 185, 0.1) 10%,
+      transparent
+    );
+  }
+  .endd .contact-me .contact-links .link:nth-child(2) {
+    background-image: radial-gradient(
+      circle at left center,
+      rgba(185, 185, 185, 0.1) 10%,
+      transparent
+    );
+  }
+}
