@@ -1,0 +1,9 @@
+@media (min-width: 1440px) {
+  .about .content {
+    display: flex;
+    align-items: center;
+  }
+  .wrap {
+    align-self: center;
+  }
+}
