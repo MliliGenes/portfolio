@@ -70,8 +70,3 @@ function progress() {
   let bg = document.querySelector(".kiki");
   bg.setAttribute("style", "--p: " + progress + "%;");
 }
-window.addEventListener("resize", () => {
-  setTimeout(() => {
-    window.location.reload();
-  }, 1000);
-});
