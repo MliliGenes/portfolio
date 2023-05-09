@@ -177,8 +177,8 @@ section.about,
 
 .home {
   width: 100%;
-  height: calc(100vh - 0.5em - 5px);
-  height: calc(100dvh - 0.5em - 5px);
+  min-height: calc(100vh - 0.5em - 5px);
+  min-height: calc(100dvh - 0.5em - 5px);
   position: relative;
   z-index: 0;
   background-size: cover;
@@ -490,7 +490,7 @@ section.about,
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent);
   display: flex;
   flex-direction: column;
-  padding: 0.8em;
+  padding: 1em;
   translate: 0% 100%;
   transform-origin: 0% 100%;
   transition: 0.6s;
@@ -588,7 +588,8 @@ section.about,
   );
   text-align: center;
   border-radius: 0.5em;
-  border: 1px solid white;
+  border: 1.5px solid white;
+  transition: 0.3s;
 }
 .endd .contact-me .contact-links .link:nth-child(2) {
   background-image: radial-gradient(
@@ -596,6 +597,10 @@ section.about,
     rgba(185, 185, 185, 0.1) 10%,
     transparent
   );
+}
+.endd .contact-me .contact-links .link:hover {
+  box-shadow: 00 00 5px rgba(255, 255, 255, 0.5),
+    inset 00 00 5px rgba(255, 255, 255, 0.4);
 }
 .endd .contact-me .contact-links .link a {
   color: white;

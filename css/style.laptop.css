@@ -5,7 +5,7 @@
   .nav ul {
     display: flex;
     list-style: none;
-    gap: 2em;
+    gap: 4em;
   }
   .nav ul li a {
     position: relative;
@@ -15,7 +15,7 @@
     font-family: "Vina Sans", cursive;
     font-weight: 200;
     color: white;
-    font-size: 1.7em;
+    font-size: 1.5em;
     transition: 0.3s;
     letter-spacing: 0.025em;
   }
@@ -80,5 +80,10 @@
   }
   .portfolio .wrapper .container .card {
     flex: 0 0 49%;
+  }
+  .endd .footer {
+    padding: 2em 5vmax;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

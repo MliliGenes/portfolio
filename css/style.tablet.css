@@ -54,6 +54,9 @@
     display: flex;
     align-items: center;
   }
+  .portfolio .wrapper .container .info {
+    padding: 1em 3em;
+  }
   .portfolio .wrapper .container .info h2 {
     font-size: 4em;
   }
@@ -102,7 +105,9 @@
       rgba(185, 185, 185, 0.1) 10%,
       transparent
     );
+    border: 2px solid white;
   }
+
   .endd .contact-me .contact-links .link:nth-child(2) {
     background-image: radial-gradient(
       circle at left center,
